@@ -307,7 +307,7 @@ function init() {
                         if (thematicMapSource.getState() == 'ready') {
                             //Pan to the new extent
                             var layerExtent = thematicMapSource.getExtent();
-                            view.fitExtent(layerExtent);
+                            view.fitExtent(layerExtent,map.getSize());
 
 
                         }
