@@ -70,8 +70,8 @@ echo "* Creating HDFS directories"
 hadoop fs -mkdir $OSM_DIR $DATA_DIR $DATA_DIR/polygons $DATA_DIR/points
 
 echo "* Copying input data to HDFS"
-hadoop fs -put data/polygons/* $DATA_DIR/polygons
-hadoop fs -put data/points/* $DATA_DIR/points
+hadoop fs -put data/polygons/polygons.json $DATA_DIR/polygons
+hadoop fs -put data/points/points.csv $DATA_DIR/points
 echo "* Copying input data to Dashboards"
 cp data/polygons/polygons.json  $DASHBOARD_DIR/data.json
 echo "* Expecting Longitude Column Index in CSV file at $LONGITUDE_INDEX"
